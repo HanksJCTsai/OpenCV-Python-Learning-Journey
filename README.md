@@ -1,7 +1,5 @@
 # OpenCV Python Learning Journey (30-Day Challenge)
 
-![OpenCV Logo](https://opencv.org/wp-content/uploads/2022/09/OpenCV_logo_black_.png)
-
 Welcome to my 30-day intensive learning journey into the world of Computer Vision with OpenCV and Python! This repository documents my daily progress, code snippets, mini-projects, and notes as I go from the basics to more advanced applications.
 
 ## 🎯 About This Project
