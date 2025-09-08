@@ -1,13 +1,99 @@
-# OpenCV Python Learning Journey (30-Day Challenge)
+# 🚀 OpenCV Python 30天挑戰：從像素到手勢
 
-Welcome to my 30-day intensive learning journey into the world of Computer Vision with OpenCV and Python! This repository documents my daily progress, code snippets, mini-projects, and notes as I go from the basics to more advanced applications.
+歡迎來到我的 **30天密集學習挑戰**！  
+本專案旨在系統性地探索如何運用 **OpenCV 與 Python** 進行電腦視覺開發。  
+此儲存庫將作為我的學習日誌，詳細記錄每日進度、程式碼實作、迷你專案與核心筆記，  
+目標是從基礎出發，逐步建構出複雜的應用。
 
-## 🎯 About This Project
+---
 
-The goal of this 30-day challenge is to build a solid foundation in computer vision principles and gain practical experience by completing daily tasks and weekly projects. This repository serves as a personal log and a portfolio of my work.
+## 🎯 專案總覽
+- 為電腦視覺原理打下穩固基礎  
+- 每日實作 & 每週專案，累積實戰經驗  
+- 此儲存庫不僅是學習日誌，更是動態更新的作品集，完整呈現技能成長軌跡  
 
-- **Technology Stack:** Python, OpenCV, NumPy
-- **Challenge Duration:** 30 Days
-- **My Goal:** To be able to build practical computer vision applications and integrate them with other technologies like deep learning.
+---
+
+## 💻 技術棧
+- **核心技術**: Python, OpenCV, NumPy  
+- **開發工具**: uv (相依性管理), pytest (測試), ruff (程式碼風格), mypy (型別檢查)  
+
+---
+
+## ⏱️ 挑戰期間
+- 30 天
+
+---
+
+## 🌟 個人目標
+- 掌握建構實用電腦視覺應用的核心能力  
+- 為未來銜接深度學習等高階技術奠定基礎  
+
+---
+
+## 🗺️ 30天學習藍圖
+
+### 第一週：基礎 — 影像與影片操作
+**目標**：掌握擷取、處理和標註視覺資料的核心技能。  
+
+- [ ] Day 1: 影片串流與基本轉換 (VideoCapture, FPS計算, 灰階, 縮放)  
+- [ ] Day 2: 影像標註 (繪製線條、矩形、圓形和文字)  
+- [ ] Day 3: 感興趣區域 (ROI) 操作與應用  
+- [ ] Day 4: 深入理解色彩空間 (BGR ↔ HSV)  
+- [ ] Day 5: 影像二值化 (Threshold, Adaptive Threshold, Otsu)  
+- [ ] Day 6: 影像平滑化與模糊化 (GaussianBlur, MedianBlur)  
+- [ ] Day 7: 第一週里程碑 – 開發一款即時鏡頭濾鏡，可對選定 ROI 進行馬賽克或模糊處理  
+
+---
+
+### 第二週：核心視覺技術 — 形狀與輪廓
+**目標**：學習偵測並分析影像中的邊緣、形狀和物體。  
+
+- [ ] Day 8: 邊緣偵測 (Canny 演算法)  
+- [ ] Day 9: 型態學操作 (侵蝕、膨脹、開幕、閉幕)  
+- [ ] Day 10: 輪廓偵測與繪製 (findContours, contourArea)  
+- [ ] Day 11: 凸包 (Convex Hull) 偵測  
+- [ ] Day 12: 形狀近似與多邊形偵測  
+- [ ] Day 13: 霍夫直線與圓形偵測  
+- [ ] Day 14: 第二週里程碑 – 建立一個「拍手偵測器」，在偵測到快速手部動作時觸發螢幕視覺特效  
+
+---
+
+### 第三週：動態視覺 — 追蹤與特徵
+**目標**：探索追蹤物體運動和識別關鍵特徵的方法。  
+
+- [ ] Day 15: 基於顏色的物體追蹤 (inRange + HSV)  
+- [ ] Day 16: 動作偵測 (背景相減法 MOG2)  
+- [ ] Day 17: 光流法估計 (Lucas-Kanade Optical Flow)  
+- [ ] Day 18: 角點偵測 (Harris, Shi-Tomasi)  
+- [ ] Day 19: 特徵偵測 (SIFT/SURF/ORB 概念)  
+- [ ] Day 20: 模板匹配 (Template Matching)  
+- [ ] Day 21: 第三週里程碑 – 實作一個虛擬滑鼠，透過追蹤特定顏色的物體來控制游標移動  
+
+---
+
+### 第四週：整合應用 — 打造手勢辨識器
+**目標**：綜合所有已學技能，完成最終的手勢辨識應用程式。  
+
+- [ ] Day 22: 手部區域偵測 (膚色分割)  
+- [ ] Day 23: 手部輪廓提取與優化  
+- [ ] Day 24: 指尖偵測 (利用 convexityDefects)  
+- [ ] Day 25: 手指數量辨識 (1–5指)  
+- [ ] Day 26: 基於規則的手勢辨識 ("OK", "讚", "拳頭")  
+- [ ] Day 27: 整合手勢與事件觸發 (音效/動畫)  
+- [ ] Day 28: 功能測試與偵錯  
+- [ ] Day 29: 專案優化 (模組化, 建立 utils.py)  
+- [ ] Day 30: 最終專案展示 – 錄製示範影片並完成 README 文件  
+
+---
+
+## 🏆 最終成果：即時手勢辨識器
+
+一個高效能的即時手勢辨識應用程式，可透過標準網路攝影機，精準解讀並回應手勢指令。  
+
+**主要功能：**  
+- ✅ **手指數量辨識**：準確偵測並顯示伸出的手指數量 (1–5根)  
+- ✅ **靜態手勢辨識**：辨識特定的手勢，如 "OK"、"讚" 和 "拳頭"  
+- ✅ **事件驅動互動**：根據辨識出的手勢觸發螢幕上的事件 (例如：顯示文字、播放音效)  
 
 ---
